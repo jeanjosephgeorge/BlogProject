@@ -1,7 +1,3 @@
-// Load and initialize express
-var express = require('express');
-var app = express();
-
 // Load and initialize bluebird
 let promise = require('bluebird');
 
@@ -25,5 +21,5 @@ const pgp = require('pg-promise')(initOptions);
 // Creaate the database instance:
 const db  = pgp(config);
 
-
-module.exports = router;
+//Connecting db to app.js
+module.exports = db;

@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Running Database
-// var db = require('./models/database');
+var db = require('./models/database');
 
 // Setup and initalize EJS
 app.set('view engine', 'ejs');
