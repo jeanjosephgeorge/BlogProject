@@ -3,9 +3,9 @@ const router = express.Router();
 
 
 
-app.get('/', (req,res)=>{
-    res.render('homepage')
-})
+router.get('/', (req,res)=>{
+    res.render('home')
+});
 
 
 

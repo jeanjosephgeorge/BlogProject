@@ -1,4 +1,3 @@
-
 // Load and initialize express
 var express = require('express');
 var app = express();
