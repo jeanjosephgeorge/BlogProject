@@ -29,11 +29,18 @@
     <form action="/blogs" method='POST'>
       Title of Blog:<input type="text" name='title'><br>
       Content:<input type="text" name='body'><br>
-      Author:<input type="text" name='author'><br>
-      Category:<input type="text" name='category'><br>
+      <!-- Author:<input type="text" name='author'><br> REMOVED BECAUSE AUTHOR INFORMATION IS CAPTURED IN AUTHOR FORM --> 
+      <!-- Category:<input type="text" name='category'><br> REMOVED BECAUSE SEPARATE FORM NEEDS TO BE CREATED FOR CATEGORY -->
       Date Written: <input type="text" name='create_date'>
       <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
     </form>
+
+    <h3>Blog Type</h3>
+      <form action="/category" method="POST">
+      Category: <input type="text" name=category>
+      <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
+
+      </form>
 
     <br>
     <br>
