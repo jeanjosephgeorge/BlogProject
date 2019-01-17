@@ -17,11 +17,9 @@ router.get('/blogs',(req,res)=>{
 router.post('/blogs', (req,res)=>{
     var title = req.body.title;
     var body = req.body.body;
-    var author = req.body.author;
-    var category = req.body.category;
 
     // Need to adjust code based on how comment.js code is adjusted to account for current_date using SQL command
-    db.none('INSERT INTO blog (title, body')
+    db.none("INSERT INTO blog (title, body) VALUES ($1, CURRENT_DATE, $2")
 
     
 })
