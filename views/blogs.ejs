@@ -18,25 +18,29 @@
 
         <!-- BLOG FORM -->
         <h3>Submit your blog here</h1><br>
-          <form  id = "blog-id" action="/blogs" method='POST'>
-            Title of Blog:<input type="text" name='title'><br>
-            Content:<input type="text" name='body'><br>
+          <form  id = "blogID" action="/blogs" method='POST'>
+            Title of Blog:<input id='blogID' type="text" name='title'><br>
+            Content:<input id='contentID' type="text" name='body'><br>
             <!-- Author:<input type="text" name='author'><br> REMOVED BECAUSE AUTHOR INFORMATION IS CAPTURED IN AUTHOR FORM --> 
             <!-- Category:<input type="text" name='category'><br> REMOVED BECAUSE SEPARATE FORM NEEDS TO BE CREATED FOR CATEGORY -->
-            Date Written: <input type="text" name='create_date'><br>
+            Date Written: <input id='createdateID' type="text" name='create_date'><br>
+            Private? <input id='privateID' type="checkbox" name='private'>
             <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
           </form><br><br>
       
           <h3>Blog Type</h3>
             <form id = "category-id" action="/category" method="POST">
-            Category: <input type="text" name=category>
+            Category: <input type="text" name='category'>
             <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
             </form><br><br>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="/js/home.js"></script>
