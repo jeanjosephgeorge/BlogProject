@@ -9,10 +9,17 @@ $(function(){
             imagepath: $('#imageID').val()
 
         });
-    })
-    // $('#blog-id').submit(function(e){
-    //     e.preventDefault();
-    // })
+    });
+    $('#blog-id').submit(function(e){
+        e.preventDefault();
+
+        $.post('/blogs', {
+            title: $('#blogID').val(),
+            content: $('#contentID').val(),
+            date_written: $('#createdateID').val(),
+            private: $('#privateID').val()
+        });
+    });
     // $('#category-id').submit(function(e){
     //     e.preventDefault();
     // })
