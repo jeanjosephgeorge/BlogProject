@@ -3,7 +3,8 @@ var router = express.Router();
 var db = require('../models/database');
 var bodyParser = require('body-parser');
 
-router.use(bodyParser.urlendcoded({extended: false}));
+router.use(bodyParser.urlencoded({extended: false}));
+
 
 router.get('/author', (req,res)=>{
     db.any('SELECT * FROM author')
@@ -20,15 +21,12 @@ router.post('/author', (req,res)=>{
     var bio = req.body.bio;
     var imagepath = req.body.imagepath;
 
-    db.none("INSERT INTO author (fname, lname, bio, imagepath) VALUES ($1, $2, $3, $4)", fname, lname, bio, imagepath)
+    db.none("INSERT INTO author (fname, lname, bio, imagepath) VALUES ($1, $2, $3, $4)", [fname, lname, bio, imagepath])
     .then((data)=>{
         res.render('author',{
             author: data
         })
     });
-
-
-
 });
 
 
