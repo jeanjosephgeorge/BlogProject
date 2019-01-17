@@ -15,7 +15,9 @@ app.use(express.static('public'));
 
 //Middleware for Routes
 app.use(require('./routes/home'));
-app.use(require('./routes/blogs'))
+app.use(require('./routes/blogs'));
+app.use(require('./routes/author'));
+app.use(require('./routes/comment'));
 
 
 // Setting up server

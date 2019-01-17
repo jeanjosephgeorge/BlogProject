@@ -10,16 +10,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
+
+    <!-- AUTHOR FORM -->
+    <h1> Submit information about yourself here</h1>
+    <form action = "/author" method='POST'>
+      First Name: <input type="text" name='fname'>
+      Last Name: <input type="text" name='lname'>
+      Tell us about yourself: <input type="text" name='bio'>
+      Your Picture: <input type="text" name='imagepath'>
+      <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
+     </form>
+
+     <br>
+     <br>
+
+     <!-- BLOG FORM -->
       <h1>Submit your blog here</h1><br>
     <form action="/blogs" method='POST'>
       Title of Blog:<input type="text" name='title'><br>
       Content:<input type="text" name='body'><br>
       Author:<input type="text" name='author'><br>
       Category:<input type="text" name='category'><br>
+      Date Written: <input type="text" name='create_date'>
       <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
     </form>
 
+    <br>
+    <br>
 
+    <!-- COMMENT FORM (THIS WILL BE MOVED TO UNDER THE BLOG ON THE HOMEPAGE)-->
+    <h1> Love to hear your thoughts!</h1>
+    <form action="/comments" method='POST'>
+      Username: <input type="text" name='username'>
+      Comment: <input type="text" name='body'>
+      <button type="submit" class="btn btn-primary" value='submit'>Submit</button>    
+    </form>
 
       <!-- -- CREATE TABLE blog (
         --     create_date date,
