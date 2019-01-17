@@ -7,7 +7,7 @@ router.use(bodyParser.urlencoded({extended: false}));
 
 router.get('/blogs',(req,res)=>{
     res.render('blogs')
-})
+});
 
 router.post('/blogs', (req,res)=>{
     var title = req.body.title;
