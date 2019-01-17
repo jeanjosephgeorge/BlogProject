@@ -10,6 +10,7 @@ $(function(){
 
         });
     });
+
     $('#blog-id').submit(function(e){
         e.preventDefault();
 
@@ -20,6 +21,16 @@ $(function(){
             private: $('#privateID').val()
         });
     });
+
+$('#category-id').submit(function(e){
+    e.preventDefault();
+
+    $.post('/category',{
+        category: $('#categoryID').val()
+        
+    })
+});
+
     // $('#category-id').submit(function(e){
     //     e.preventDefault();
     // })

@@ -25,6 +25,6 @@ router.post('/category', (req,res)=>{
         })
     });
 
-    
+
 });
 module.exports = router;
