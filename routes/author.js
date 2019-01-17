@@ -19,9 +19,9 @@ router.post('/author', (req,res)=>{
     var fname = req.body.fname;
     var lname = req.body.lname;
     var bio = req.body.bio;
-    var imagepath = req.body.imagepath;
+    var image = req.body.imagepath;
 
-    db.none("INSERT INTO author (fname, lname, bio, imagepath) VALUES ($1, $2, $3, $4)", [fname, lname, bio, imagepath])
+    db.none("INSERT INTO author (fname, lname, bio, imagepath) VALUES ($1, $2, $3, $4)", [fname, lname, bio, image])
     .then((data)=>{
         res.render('author',{
             author: data

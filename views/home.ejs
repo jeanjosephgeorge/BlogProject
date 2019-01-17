@@ -15,33 +15,6 @@
     <%- include partials/navbar.ejs %>
 
 
-    <!-- AUTHOR FORM -->
-    <h3> Submit information about yourself here</h3>
-    <form id = "author-id" action = "/author" method='POST'>
-      First Name: <input type="text" name='fname'><br>
-      Last Name: <input type="text" name='lname'><br>
-      Tell us about yourself: <input type="text" name='bio'><br>
-      Your Picture: <input type="text" name='imagepath'><br>
-      <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
-    </form><br><br>
-
-    <!-- BLOG FORM -->
-    <h3>Submit your blog here</h1><br>
-    <form  id = "blog-id" action="/blogs" method='POST'>
-      Title of Blog:<input type="text" name='title'><br>
-      Content:<input type="text" name='body'><br>
-      <!-- Author:<input type="text" name='author'><br> REMOVED BECAUSE AUTHOR INFORMATION IS CAPTURED IN AUTHOR FORM --> 
-      <!-- Category:<input type="text" name='category'><br> REMOVED BECAUSE SEPARATE FORM NEEDS TO BE CREATED FOR CATEGORY -->
-      Date Written: <input type="text" name='create_date'><br>
-      <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
-    </form><br><br>
-
-    <h3>Blog Type</h3>
-      <form id = "category-id" action="/category" method="POST">
-      Category: <input type="text" name=category>
-      <button type="submit" class="btn btn-primary" value='submit'>Submit</button>
-      </form><br><br>
-
     <!-- COMMENT FORM (THIS WILL BE MOVED TO UNDER THE BLOG ON THE HOMEPAGE)-->
 
     <h3> Love to hear your thoughts!</h3>
