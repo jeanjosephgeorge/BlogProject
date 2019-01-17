@@ -6,7 +6,12 @@ var bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({extended: false}));
 
 router.get('/blogs',(req,res)=>{
-    res.render('blogs')
+    db.any('SELECT * FROM blog')
+    .then((data)=>{
+        res.render('blogs',{
+            blog : data
+        })
+    });
 });
 
 router.post('/blogs', (req,res)=>{
@@ -14,6 +19,9 @@ router.post('/blogs', (req,res)=>{
     var body = req.body.body;
     var author = req.body.author;
     var category = req.body.category;
+
+    // Need to adjust code based on how comment.js code is adjusted to account for current_date using SQL command
+    db.none('INSERT INTO blog (title, body')
 
     
 })

@@ -18,6 +18,7 @@ app.use(require('./routes/home'));
 app.use(require('./routes/blogs'));
 app.use(require('./routes/author'));
 app.use(require('./routes/comment'));
+app.use(require('./routes/category'));
 
 
 // Setting up server

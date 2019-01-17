@@ -18,6 +18,7 @@ router.post('/comment', (req,res)=>{
     var username = req.body.username;
     var body = req.body.body;
 
+    // Need to revisit to ensure that this code is stored into comments DB and that it pulls onto EJS file
     db.none("INSERT INTO comments (username, post_date, body) VALUES ($1, CURRENT_DATE, $2)", [username, body])
     .then((data)=>{
         res.render('comment', {
