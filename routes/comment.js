@@ -14,17 +14,31 @@ router.get('/comment', (req,res)=>{
     });
 });
 
-router.post('/comment', (req,res)=>{
+router.post('/comment',(req,res)=>{
     var username = req.body.username;
-    var body = req.body.body;
+    var comment = req.body.comment;
+    console.log('Comment Page Hello World')
 
-    // Need to revisit to ensure that this code is stored into comments DB and that it pulls onto EJS file
-    db.none("INSERT INTO comments (username, post_date, body) VALUES ($1, CURRENT_DATE, $2)", [username, body])
+    db.none('INSERT INTO comments (username, comment) VALUES ($1, $2)' [username, comment])
     .then((data)=>{
-        res.render('comment', {
-            commment: data
-        });
-    });
-});
+        res.render('comment',{
+            comment:data
+        })
+    })
+})
+
+
+// router.post('/comment', (req,res)=>{
+//     var username = req.body.username;
+//     var body = req.body.body;
+
+//     // Need to revisit to ensure that this code is stored into comments DB and that it pulls onto EJS file
+//     db.none("INSERT INTO comments (username, post_date, body) VALUES ($1, CURRENT_DATE, $2)", [username, body])
+//     .then((data)=>{
+//         res.render('comment', {
+//             commment: data
+//         });
+//     });
+// });
 
 module.exports = router;

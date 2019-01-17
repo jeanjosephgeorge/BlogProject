@@ -31,12 +31,16 @@ $('#category-id').submit(function(e){
     })
 });
 
-    // $('#category-id').submit(function(e){
-    //     e.preventDefault();
-    // })
-    // $('#comment-id').submit(function(e){
-    //     e.preventDefault();
-    // })
+
+$('#comment-id').submit(function(e){
+    e.preventDefault();
+
+    $.post('/comment',{
+        username: $('#usernameID'),
+        comment: $('#commentID')
+    })
+});
+
 
     console.log('hello world');
 });
