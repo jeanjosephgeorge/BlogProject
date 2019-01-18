@@ -40,5 +40,4 @@ $('#comment-id').submit(function(e){
     })
 });
 
-
 });
