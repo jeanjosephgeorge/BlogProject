@@ -26,8 +26,7 @@ $('#category-id').submit(function(e){
     e.preventDefault();
 
     $.post('/category',{
-        category: $('#categoryID').val()
-        
+        username: $('#categoryID').val()        
     })
 });
 
@@ -36,11 +35,10 @@ $('#comment-id').submit(function(e){
     e.preventDefault();
 
     $.post('/comment',{
-        username: $('#usernameID'),
-        comment: $('#commentID')
+        username: $('#usernameID').val(),
+        comment: $('#commentID').val()
     })
 });
 
 
-    console.log('hello world');
 });

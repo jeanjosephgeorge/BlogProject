@@ -19,7 +19,7 @@ router.post('/comment',(req,res)=>{
     var comment = req.body.comment;
     console.log('Comment Page Hello World')
 
-    db.none('INSERT INTO comments (username, comment) VALUES ($1, $2)' [username, comment])
+    db.none('INSERT INTO comments (username, body) VALUES ($1, $2)' [username, comment])
     .then((data)=>{
         res.render('comment',{
             comment:data
