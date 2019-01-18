@@ -17,7 +17,6 @@ router.get('/comment', (req,res)=>{
 router.post('/comment',(req,res)=>{
     var username = req.body.username;
     var comment = req.body.comment;
-    console.log('Comment Page Hello World')
 
     db.none("INSERT INTO comments (username, body) VALUES ($1, $2)", [username, comment])
     .then((data)=>{
