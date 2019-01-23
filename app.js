@@ -5,15 +5,15 @@ const app = express();
 // Running Database
 var db = require('./models/database');
 
-// Setup and initalize EJS
+// Setup and initalize EJS and accessing views folder
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-// Setup Public folder
+// Setup Public folder to access CSS and Images
 app.use(express.static('public'));
 
 
-//Middleware for Routes
+// Middleware for Routes Setup
 app.use(require('./routes/home'));
 app.use(require('./routes/blogs'));
 app.use(require('./routes/author'));
